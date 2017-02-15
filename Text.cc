@@ -764,5 +764,9 @@ void Text::drawCredits(int width, int height) {
 	move(y++, x);
 	addstr("This game was created by Yitzchak Schwarz");
 	
+	x = width / 2 - (38 / 2);
+	move(y++, x);
+	addstr("https://github.com/Lestibournes/Sparky");
+	
 	refresh();
 }
