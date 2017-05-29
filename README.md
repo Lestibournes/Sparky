@@ -3,7 +3,7 @@
 Compile with:
 make
 
-Requires NCurses header files to compile.
+Requires ncurses header files to compile. In Ubuntu this means installing the libncurses-dev package.
 
 Run with:
 ./Sparky
