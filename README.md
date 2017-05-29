@@ -3,6 +3,8 @@
 Compile with:
 make
 
+Requires NCurses header files to compile.
+
 Run with:
 ./Sparky
 
