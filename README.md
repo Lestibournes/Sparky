@@ -3,8 +3,10 @@
 Compile with:
 make
 
-run with:
+Run with:
 ./Sparky
+
+Runs in the teminal. If the display area in the terminal is not big enough it will not display properly.
 
 Project home:
 https://github.com/Lestibournes/Sparky
