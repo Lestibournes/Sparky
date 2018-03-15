@@ -1,0 +1,22 @@
+name: sparky
+version: '1.0'
+summary: A little game about a dog that is trying to make friends.
+description: |
+  Play as a little dog that chases around people and dogs. If you you manage to touch one of them
+  he will become your friend, but if one of your friends touches a stranger he will become a
+  stranger again. Once all the people and dogs in a level are your friends you progress to the
+  next level. Each level has one more people and dogs than the previous level, and it can quickly
+  become quite hectic.
+  
+  Runs in the terminal with the command: sparky
+  Make sure that the terminal window is big enough.
+grade: devel
+confinement: strict
+
+apps:
+  sparky:
+    command: sparky
+
+parts:
+  sparky:
+    plugin: make
