@@ -25,12 +25,6 @@ class Simulator {
 		
 //		The player character:
 		Dog * player;
-	
-//		The hight of the simulation area:
-		int _rows;
-		
-//		The width of the simulation area:
-		int _cols;
 		
 		void getCharBlocking(int &c1);
 		void getCharNotBlocking(int &c1, int &c2);

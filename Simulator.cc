@@ -15,15 +15,14 @@
 #include "Text.h"
 
 int Simulator::getHeight() {
-	return _rows;
+	return LINES;
 }
 		
 int Simulator::getWidth() {
-	return _cols;
+	return COLS;
 }
 
 void Simulator::drawBoard() {
-
 //Clear the screen of all previous scribbles:
 clear();
 
@@ -70,10 +69,6 @@ Simulator::Simulator() {
 	init_pair(3, COLOR_YELLOW, COLOR_BLACK);
 	init_pair(4, COLOR_GREEN, COLOR_BLACK);
 	init_pair(5, COLOR_YELLOW, COLOR_BLACK);
-	
-//	Store the dimentions of the simulation area:
-	_rows = LINES;// - 4;
-	_cols = COLS;// - 2;
 }
 
 void Simulator::init() {
@@ -113,7 +108,7 @@ void Simulator::run() {
 	
 //	Draw the splash screen:
 	attron(COLOR_PAIR(4));
-	Text::drawTitle(_cols, _rows);
+	Text::drawTitle(getWidth(), getHeight());
 	std::this_thread::sleep_for(std::chrono::milliseconds {pause/1});
 	
 //	Wait for player input. If the play presses the Esc key, exit:
@@ -126,7 +121,7 @@ void Simulator::run() {
 	
 //	Draw the credit screen:
 	attron(COLOR_PAIR(4));
-	Text::drawCredits(_cols, _rows);
+	Text::drawCredits(getWidth(), getHeight());
 	std::this_thread::sleep_for(std::chrono::milliseconds {pause/1});
 	
 //	Wait for player input. If the play presses the Esc key, exit:
@@ -138,7 +133,7 @@ void Simulator::run() {
 	}
 	
 	attron(COLOR_PAIR(5));
-	Text::drawLevel(num_persons, _cols, _rows);
+	Text::drawLevel(num_persons, getWidth(), getHeight());
 	std::this_thread::sleep_for(std::chrono::milliseconds {pause/1});
 	
 //	Wait for player input. If the play presses the Esc key, exit:
@@ -164,7 +159,7 @@ void Simulator::run() {
 			
 //			Draw the victory message:
 			attron(COLOR_PAIR(5));	
-			Text::drawLevel(num_persons, _cols, _rows);
+			Text::drawLevel(num_persons, getWidth(), getHeight());
 			std::this_thread::sleep_for(std::chrono::milliseconds {pause/1});
 			
 ////			Wait for keypress:
