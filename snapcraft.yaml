@@ -1,0 +1,33 @@
+name: Sparky
+version: "1.0"
+summary: A little game about a dog that is trying to make friends.
+description: |
+  Play as a little that chases around people and dogs. If you you manage to touch one of them he 
+  will become your friend, but if one of your friends touches a stranger he will become a 
+  stranger again. Once all the people and dogs in a level are your friends you progress to the 
+  next level. Each level has one more people and dogs than the previous level, and it can quickly 
+  become quite hectic.
+  
+
+confinement: strict
+
+icon: snap/gui/Dog.png
+
+grade: devel
+
+apps:
+  sparky:
+    command: Sparky
+
+parts:
+  sparky:
+    plugin: autotools
+    source-type: tar
+    source: https://github.com/Lestibournes/Sparky.git
+    build-packages:
+      - g++
+      - make
+      - git
+      - libncurses-dev
+
+
