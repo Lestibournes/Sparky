@@ -28,5 +28,4 @@ parts:
       - g++
       - make
       - libncurses-dev
-
-
+      - gnome-terminal
