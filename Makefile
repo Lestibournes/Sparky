@@ -1,4 +1,4 @@
-Sparky: main.cc Simulator.o Text.o Dog.o Person.o Character.o
+sparky: main.cc Simulator.o Text.o Dog.o Person.o Character.o
 	$(CXX) -Wall main.cc Simulator.o Text.o Dog.o Person.o Character.o -l ncurses -o $@
 
 main.o: main.cc
@@ -20,4 +20,7 @@ Character.o: Character.cc Character.h
 	$(CXX) -c -Wall Character.cc -o $@
 
 clean:
-	rm -f Sparky *.o
+	rm -f sparky *.o
+
+install:
+	mv sparky ../install/sparky
