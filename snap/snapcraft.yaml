@@ -10,7 +10,10 @@ description: |
   
   Runs in the terminal with the command: sparky
   Make sure that the terminal window is big enough.
-grade: devel
+
+icon: meta/gui/icon.png
+
+grade: stable
 confinement: strict
 
 apps:

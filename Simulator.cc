@@ -1,6 +1,23 @@
-/*
-	I'm going to change this so there is one person who's movement is controlled by the player and whenever he collides with a dog the dog is destroyed. Also I'll set the display area to be the full available screen real estate rather than user-provided dimensions.
-*/
+/**
+
+    Sparky - A little game about a dog that is trying to make friends
+    Copyright (C) 2017  Gerald Isaac Schwarz
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License version 2.0 only,
+    as published by the Free Software Foundation.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+**/
+
 #include "Simulator.h"
 
 #include <cstdlib>
